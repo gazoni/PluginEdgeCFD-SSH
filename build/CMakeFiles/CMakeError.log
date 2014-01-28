@@ -1,0 +1,126 @@
+Determining if the Q_WS_X11 exist failed with the following output:
+Change Dir: C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~2.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec4008918342
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: cmTryCompileExec4008918342, Configuration: Debug x64 ------
+1>Build started 07/10/2013 16:15:05.
+1>PrepareForBuild:
+1>  Creating directory "C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\PluginEdgeCFD\build\CMakeFiles\CMakeTmp\Debug\".
+1>InitializeBuildStatus:
+1>  Creating "cmTryCompileExec4008918342.dir\Debug\cmTryCompileExec4008918342.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+1>  Copyright (C) Microsoft Corporation.  All rights reserved.
+1>  
+1>  cl /c /I"C:/Qt/4.8.2-x64/include" /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec4008918342.dir\Debug\\" /Fd"C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4008918342.pdb" /Gd /TP /errorReport:prompt CheckSymbolExists.cxx
+1>  
+1>  CheckSymbolExists.cxx
+1>CheckSymbolExists.cxx(8): error C2065: 'Q_WS_X11' : undeclared identifier
+1>
+1>Build FAILED.
+1>
+1>Time Elapsed 00:00:00.23
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+File C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~2.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec2911932776
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: cmTryCompileExec2911932776, Configuration: Debug x64 ------
+1>Build started 07/10/2013 16:15:09.
+1>PrepareForBuild:
+1>  Creating directory "C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\PluginEdgeCFD\build\CMakeFiles\CMakeTmp\Debug\".
+1>InitializeBuildStatus:
+1>  Creating "cmTryCompileExec2911932776.dir\Debug\cmTryCompileExec2911932776.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+1>  Copyright (C) Microsoft Corporation.  All rights reserved.
+1>  
+1>  cl /c /I"C:/Qt/4.8.2-x64/include" /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2911932776.dir\Debug\\" /Fd"C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2911932776.pdb" /Gd /TP /errorReport:prompt CheckSymbolExists.cxx
+1>  
+1>  CheckSymbolExists.cxx
+1>CheckSymbolExists.cxx(8): error C2065: 'Q_WS_QWS' : undeclared identifier
+1>
+1>Build FAILED.
+1>
+1>Time Elapsed 00:00:00.23
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+File C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~2.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec4213829186
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: cmTryCompileExec4213829186, Configuration: Debug x64 ------
+1>Build started 07/10/2013 16:15:10.
+1>PrepareForBuild:
+1>  Creating directory "C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\PluginEdgeCFD\build\CMakeFiles\CMakeTmp\Debug\".
+1>InitializeBuildStatus:
+1>  Creating "cmTryCompileExec4213829186.dir\Debug\cmTryCompileExec4213829186.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+1>  Copyright (C) Microsoft Corporation.  All rights reserved.
+1>  
+1>  cl /c /I"C:/Qt/4.8.2-x64/include" /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec4213829186.dir\Debug\\" /Fd"C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4213829186.pdb" /Gd /TP /errorReport:prompt CheckSymbolExists.cxx
+1>  
+1>  CheckSymbolExists.cxx
+1>CheckSymbolExists.cxx(8): error C2065: 'Q_WS_MAC' : undeclared identifier
+1>
+1>Build FAILED.
+1>
+1>Time Elapsed 00:00:00.25
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+File C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

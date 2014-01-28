@@ -1,0 +1,688 @@
+
+!RESUME
+!..............................................................................................
+!.                                                                                            .
+!.               TRECHO DE EXPORTACAO DE DADOS DE CONTROLE E PRESCRICOES                      .
+!.                                                                                            .
+!..............................................................................................
+
+! NUMBER OF SPECIES
+NSPEC=2
+
+! ... PARAMETROS DO MODELO ...
+NNOEL = 4                   ! NUMERO DE NOS POR ELEMENTO
+NUMAT = 1                   ! NUMERO DE MATERIAIS
+NDIM  = 3                   ! DIMENSAO ESPACIAL DO PROBLEMA
+NGL   = 4                   ! NUMERO DE GRAUS DE LIBERDADE POR NO
+NPAR  = 8                   ! NUMERO DE PARAMETROS
+! ... TOLERANCIAS ...
+DUTOL  = 1.D-03            
+RTOL   = 1.D-03            
+! ... OPCOES DE SOLVER ...
+ISOLVER= 3                  ! FLAG PARA ESCOLHA DE SOLVER
+                            ! 1 = GMRES
+                            ! 2 = BICGSTAB
+                            ! 3 = TFQMR
+KMAX1  = 35                 ! VETORES DE BUSCA DO GMRES
+! ... IMPRESSAO DE RESULTADOS ...
+IPRINT = 10                 ! FREQUENCIA DE IMPRESSAO DE RESULTADOS
+INL    = 7                  ! NUMERO DE ITERACOES NAO-LINEARES      
+MAXSLV = -200               ! CONTROLE DE NUMERO MAXIMO DE ITERACOES DO SOLVER NEQ/MAXSLV
+NOAD   = 0                  ! NUMERO DE LAYERS PARA A DESATIVACAO DINAMICA (0=DESLIGA A DD)
+NTAN   = 1000               ! NUMERO DE ITERACOES SUCESSIVAS EXECUTADAS ANTES DO METODO DE NEWTON
+NFUN   = 1                  ! NUMERO DE FUNCOES 
+! ... PARAMETROS DO BACKTRACKING ...
+ALPHA  = 1.D-04
+SIGMA0 = 1.D-01
+SIGMA1 = 5.D-01
+GAMMA  = 9.D-01              
+MAXARM = 20                 ! NUMERO MAXIMO DE REDUCAO DE PASSOS
+ETA0   = 0.10               ! TOLERANCIA INICIAL DO SOLVER
+ETAMAX = 0.001              ! TOLERANCIA MAXIMA DO SOLVER
+INWT   = 2                  ! NUMBER OF NEWTONIAN FLOW ITERATIONS            
+IMET   = 1                  ! TIPO DE METODO DE NEWTON
+                            ! 0 = NEWTON FULL
+                            ! 1 = NEWTON INEXATO
+                            ! 2 = NEWTON INEXATO+BACKTRACKING (ARMIJO 2PTS)
+                            ! 3 = NEWTON INEXATO+BACKTRACKING (ARMIJO 3PTS)
+                            ! 4 = NEWTON INEXATO+BACKTRACKING (NITSOL)
+
+DT     = -0.001             ! TAMANHO DO PASSO DE TEMPO INICIAL
+TMAX   =  1.0               ! TEMPO MAXIMO DE ANALISE
+CFLMIN =  0.5               ! CFL MINIMO
+CFLMAX =  5.0               ! CFL MAXIMO
+TOL_V  =  0.2               ! ERRO TOLERADO PARA A VELOCIDADE
+
+!..............................................................................................
+!.                                                                                            .
+!.            MACRO PARA EXPORTAR DADOS DO ANSYS PARA O PROGRAMA NEWTON                       .
+!.                                                                                            .
+!. DOF'S DO ANSYS QUE FORAM UTILIZADOS:                                                       .
+!. VX   = CONDICAO DE CONTORNO DE VELOCIDADE PRESCRITA NA DIRECAO X                           .
+!. VY   = CONDICAO DE CONTORNO DE VELOCIDADE PRESCRITA NA DIRECAO Y                           .
+!. PRES = CONDICAO DE CONTORNO DE PRESSAO PRESCRITA                                           .
+!. FX   = CONDICAO INICIAL DE VELOCIDADE PRESCRITA NA DIRECAO X                               .
+!. FY   = CONDICAO INICIAL DE VELOCIDADE PRESCRITA NA DIRECAO Y                               .
+!. FZ   = CONDICAO INICIAL DE PRESSAO PRESCRITA                                               .
+!..............................................................................................
+
+/PREP7
+ALLS
+NUMCMP,ALL
+ALLS $*VMASK $/NOPR $FILENAME= $TITULO=
+*DIM,FILENAME,CHAR,1,20,1, , , 
+*DIM,TITULO  ,CHAR,1,80,1, , , 
+/INQUIRE,FILENAME,JOBNAME           ! EXTRAI O JOBNAME
+*GET,TITULO(1,1),ACTIVE,0,TITLE,0
+!..............................................................................................
+!.                                                                                            .
+!.                TRECHO DE EXPORTACAO DE MALHA E CONECTIVIDADE                               . 
+!.                                                                                            .
+!..............................................................................................
+
+*GET,NUMEL,ELEM,0,COUNT             ! EXTRAI O NUMERO TOTAL DE ELEMENTOS
+*GET,NNOS ,NODE,0,COUNT             ! EXTRAI O NUMERO TOTAL DE NOS
+
+IEN= $XYZ=                          ! APAGA VETORES EXISTENTES
+*DIM,XYZ,ARRAY,NNOS,3,1, , ,        ! DIMENSIONA MATRIZ DE COORDENADAS NODAIS 
+
+!...................................................................................................
+!
+! ...SELECIONANDO O NODESET WALL PARA CALCULO DE QUANTIDADES DERIVADAS DO PROGRAMA
+!
+NDSET=
+*DIM,NDSET,ARRAY,NNOS,1,1, , ,        ! DIMENSIONA MATRIZ PARA MAPEAMENTO DO NODESET WALL
+CMSEL,S,BODY
+*VGET ,NDSET(1),NODE, ,NSEL, , , ,2   ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,NDSET(1),NDSET(1),EQ,1, , ,    ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+
+!...................................................................................................
+!
+! ...COORDENADAS NODAIS...
+!
+*VGET ,XYZ(1,1),NODE, ,LOC,X, , ,2  ! EXTRAI COORDENADAS X
+*VGET ,XYZ(1,2),NODE, ,LOC,Y, , ,2  ! EXTRAI COORDENADAS Y
+*VGET ,XYZ(1,3),NODE, ,LOC,Z, , ,2  ! EXTRAI COORDENADAS Z
+!
+!...................................................................................................
+!
+! ...CONECTIVIDADE...
+!
+
+*DIM,IEN,ARRAY,NUMEL,6,1, , , 
+*VFILL,IEN(1,1),RAMP,1,1                 ! NUMERACAO DOS NOS
+*VGET ,IEN(1,2),ELEM, ,NODE,1  , , ,2    ! NO1
+*VGET ,IEN(1,3),ELEM, ,NODE,2  , , ,2    ! NO2
+*VGET ,IEN(1,4),ELEM, ,NODE,3  , , ,2    ! NO3
+*VGET ,IEN(1,5),ELEM, ,NODE,5  , , ,2    ! NO4
+*VGET ,IEN(1,6),ELEM, ,ATTR,MAT, , ,2    ! MAT
+
+!...................................................................................................
+!
+! ...MAPEAMENTO DE CONDICOES DE CONTORNO...
+!
+INC=
+*DIM,INC,ARRAY,NNOS,9,1, , ,        ! DIMENSIONA MATRIZ DE CHAVES DE CARREGAMENTO
+*VFILL,INC(1,1),RAMP,1,1            ! PREENCHE VETOR COM A NUMERACAO DOS NOS
+NCVX=0 $NCVY=0 $NCVZ=0 $NCP=0 $NCT=0 $NCUX=0 $NCUY=0 $NCUX=0
+
+NSEL  ,S,D,VX,-1.E4,1.E4            ! SELECIONA NOS COM VX PRESCRITO ENTRE -1E+04 E 1E+04
+*GET  ,NCVX,NODE,0,COUNT            ! EXTRAI O NUM. DE NOS COM VX PRESCRITO
+*VGET ,INC(1,2),NODE, ,NSEL,, , ,2  ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,INC(1,2),INC(1,2),EQ,1, , ,  ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+NSEL  ,S,D,VY,-1.E4,1.E4            ! SELECIONA NOS COM VY PRESCRITO ENTRE -1E+04 E 1E+04
+*GET  ,NCVY,NODE,0,COUNT            ! EXTRAI O NUM. DE NOS COM VY PRESCRITO
+*VGET ,INC(1,3),NODE, ,NSEL,, , ,2  ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,INC(1,3),INC(1,3),EQ,1, , ,  ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+NSEL  ,S,D,VZ,-1.E4,1.E4            ! SELECIONA NOS COM VZ PRESCRITO ENTRE -1E+04 E 1E+04
+*GET  ,NCVZ,NODE,0,COUNT            ! EXTRAI O NUM. DE NOS COM VZ PRESCRITO
+*VGET ,INC(1,4),NODE, ,NSEL,, , ,2  ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,INC(1,4),INC(1,4),EQ,1, , ,  ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+NSEL  ,S,D,PRES,-1.E4,1.E4          ! SELECIONA NOS COM PRES PRESCRITO ENTRE -1E+04 E 1E+04
+*GET  ,NCP,NODE,0,COUNT             ! EXTRAI O NUM. DE NOS COM PRES PRESCRITO
+*VGET ,INC(1,5),NODE, ,NSEL,, , ,2  ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,INC(1,5),INC(1,5),EQ,1, , ,  ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+*IF,NSPEC,NE,0,THEN
+   NSEL  ,S,D,SP01,-1.E4,1.E4          ! SELECIONA NOS COM SP01 PRESCRITO ENTRE -1E+04 E 1E+04
+   *GET  ,NCT,NODE,0,COUNT             ! EXTRAI O NUM. DE NOS COM PRES PRESCRITO
+   *VGET ,INC(1,6),NODE, ,NSEL,, , ,2  ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+   *VOPER,INC(1,6),INC(1,6),EQ,1, , ,  ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+*ENDIF
+
+NSEL  ,S,D,UX,-1.E4,1.E4             ! SELECIONA NOS COM PRES PRESCRITO ENTRE -1E+04 E 1E+04
+*GET  ,NCUX,NODE,0,COUNT             ! EXTRAI O NUM. DE NOS COM UX PRESCRITO
+*VGET ,INC(1,7),NODE, ,NSEL,, , ,2   ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,INC(1,7),INC(1,7),EQ,1, , ,   ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+NSEL  ,S,D,UY,-1.E4,1.E4             ! SELECIONA NOS COM PRES PRESCRITO ENTRE -1E+04 E 1E+04
+*GET  ,NCUY,NODE,0,COUNT             ! EXTRAI O NUM. DE NOS COM UY PRESCRITO
+*VGET ,INC(1,8),NODE, ,NSEL,, , ,2   ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,INC(1,8),INC(1,8),EQ,1, , ,   ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+NSEL  ,S,D,UZ,-1.E4,1.E4             ! SELECIONA NOS COM PRES PRESCRITO ENTRE -1E+04 E 1E+04
+*GET  ,NCUZ,NODE,0,COUNT             ! EXTRAI O NUM. DE NOS COM UZ PRESCRITO
+*VGET ,INC(1,9),NODE, ,NSEL,, , ,2   ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,INC(1,9),INC(1,9),EQ,1, , ,   ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+
+
+NCAR = NCVX+NCVY+NCVZ+NCP+NCT+NCUX+NCUY+NCUZ     ! NUMERO TOTAL DE PRESCRICOES NODAIS
+
+!...................................................................................................
+!
+! ...EXTRAINDO CONDICOES DE CONTORNO DOS DOF's PARA SEUS RESPECTIVOS VETORES...
+!
+! INSTRUCOES:
+!
+! ESCOAMENTO: USAR OS GRAUS DE LIBERDADE NATURAIS DO ELEMENTO FLUID142
+!
+! TRANSPORTE: ATIVE O TRANSPORTE DE MULTIPLAS ESPECIES E DEFINA A ESPECIE 1 PARA SP01
+!
+ALLS $*VMASK $/NOPR $VELX= $VELY= $VELZ= $PRESSAO=  $SPECIE=  $FSI_UX= $FSI_UY= $FSI_UZ=         ! APAGANDO VETORES
+*DIM ,VELX   ,ARRAY,NNOS,1,1, , ,       ! CRIA VETOR VELX PARA ARMAZENAR AS PRESCRICOES 
+*DIM ,VELY   ,ARRAY,NNOS,1,1, , ,       ! CRIA VETOR VELY PARA ARMAZENAR AS PRESCRICOES 
+*DIM ,VELZ   ,ARRAY,NNOS,1,1, , ,       ! CRIA VETOR VELY PARA ARMAZENAR AS PRESCRICOES 
+*DIM ,PRESSAO,ARRAY,NNOS,1,1, , ,       ! CRIA VETOR PRES PARA ARMAZENAR AS PRESCRICOES
+*DIM ,FSI_UX ,ARRAY,NNOS,1,1, , ,       ! CRIA VETOR FSI_UX PARA ARMAZENAR AS PRESCRICOES
+*DIM ,FSI_UY ,ARRAY,NNOS,1,1, , ,       ! CRIA VETOR FSI_UY PARA ARMAZENAR AS PRESCRICOES 
+*DIM ,FSI_UZ ,ARRAY,NNOS,1,1, , ,       ! CRIA VETOR FSI_UZ PARA ARMAZENAR AS PRESCRICOES 
+
+*IF,NSPEC,NE,0,THEN
+   *DIM ,SPECIE ,ARRAY,NNOS,1,1, , ,       ! CRIA VETOR SP01 PARA ARMAZENAR AS PRESCRICOES 
+*ENDIF
+
+*GET,VELX   (1:NNOS,1),NODE,INC(1:NNOS,1),D,VX
+*GET,VELY   (1:NNOS,1),NODE,INC(1:NNOS,1),D,VY
+*GET,VELZ   (1:NNOS,1),NODE,INC(1:NNOS,1),D,VZ
+*GET,PRESSAO(1:NNOS,1),NODE,INC(1:NNOS,1),D,PRES
+*GET,FSI_UX (1:NNOS,1),NODE,INC(1:NNOS,1),D,UX
+*GET,FSI_UY (1:NNOS,1),NODE,INC(1:NNOS,1),D,UY
+*GET,FSI_UZ (1:NNOS,1),NODE,INC(1:NNOS,1),D,UZ
+
+
+*IF,NSPEC,NE,0,THEN
+   *GET,SPECIE (1:NNOS,1),NODE,INC(1:NNOS,1),D,SP01
+*ENDIF
+
+!...................................................................................................
+!
+! ...MAPEAMENTO DE CONDICOES INICIAIS...
+!
+! INSTRUCOES:
+!
+! ESCOAMENTO: PRESCRICOES DE FORCA SAO INTERPRETADAS COMO CONDICOES INICIAIS DE VELOCIDADE ( F --> U_0 )
+! 
+! TRANSPORTE: DEFINA UMA ESPECIE CHAMADA "INI" E APLIQUE COMO SE ESTIVESSE FAZENDO UM CARREGAMENTO
+!
+
+ALLS $*VMASK $/NOPR $ICI=
+*DIM,ICI,ARRAY,NNOS ,4,1, , ,
+ICVX=0 $ICVY=0 $ICVZ=0  $ICT=0
+
+NSEL  ,S,F,FX,-1.E4,1.E4                ! SELECIONA NOS DE CONDICAO INICIAL PARA VX
+*GET  ,ICVX,NODE,0,COUNT                ! EXTRAI O NUM. DE NOS COM PRES PRESCRITO
+*VGET ,ICI(1,1),NODE, ,NSEL,, , ,2      ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,ICI(1,1),ICI(1,1),EQ,1, , ,      ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+NSEL  ,S,F,FY,-1.E4,1.E4                ! SELECIONA NOS DE CONDICAO INICIAL PARA VY
+*GET  ,ICVY,NODE,0,COUNT                ! EXTRAI O NUM. DE NOS COM PRES PRESCRITO
+*VGET ,ICI(1,2),NODE, ,NSEL,, , ,2      ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,ICI(1,2),ICI(1,2),EQ,1, , ,      ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+NSEL  ,S,F,FZ,-1.E4,1.E4                ! SELECIONA NOS DE CONDICAO INICIAL PARA PRES
+*GET  ,ICVZ,NODE,0,COUNT                ! EXTRAI O NUM. DE NOS COM PRES PRESCRITO
+*VGET ,ICI(1,3),NODE, ,NSEL,, , ,2      ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+*VOPER,ICI(1,3),ICI(1,3),EQ,1, , ,      ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+
+*IF,NSPEC,NE,0,THEN
+   NSEL  ,S,D,INI,-1.E4,1.E4            ! SELECIONA NOS DE CONDICAO INICIAL PARA PRES
+   *GET  ,ICT,NODE,0,COUNT              ! EXTRAI O NUM. DE NOS COM PRES PRESCRITO
+   *VGET ,ICI(1,4),NODE, ,NSEL,, , ,2   ! CRIA "VETOR MASCARA" COM O STATUS DE SELECAO DO NO
+   *VOPER,ICI(1,4),ICI(1,4),EQ,1, , ,   ! TRANSFORMA O "VETOR MASCARA" EM VERDADEIROS (1) E FALSOS (0)
+*ENDIF
+
+NCONDI = ICVX+ICVY+ICVZ+ICT
+
+! ...EXTRAINDO CONDICOES INICIAIS...
+!
+ALLS $*VMASK $/NOPR $VX0= $VY0= $VZ0= $SP0=
+*DIM ,VX0,ARRAY,NNOS,1,1, , ,           ! CRIA VETOR VXT 
+*DIM ,VY0,ARRAY,NNOS,1,1, , ,           ! CRIA VETOR VYT
+*DIM ,VZ0,ARRAY,NNOS,1,1, , ,           ! CRIA VETOR PREST
+*IF,NSPEC,NE,0,THEN
+   *DIM ,SP0,ARRAY,NNOS,1,1, , ,        ! CRIA VETOR SPT
+*ENDIF
+
+
+*GET ,VX0(1:NNOS,1),NODE,INC(1:NNOS,1),F,FX
+*GET ,VY0(1:NNOS,1),NODE,INC(1:NNOS,1),F,FY
+*GET ,VZ0(1:NNOS,1),NODE,INC(1:NNOS,1),F,FZ
+*IF,NSPEC,NE,0,THEN
+   *GET ,SP0(1:NNOS,1),NODE,INC(1:NNOS,1),D,INI
+*ENDIF
+
+
+!..............................................................................................
+!.                                                                                            .
+!.               IMPRESSAO DOS ARQUIVOS DE DADOS PARA O PROGRAMA NEWTON                       .
+!.                                                                                            .
+!..............................................................................................
+!
+! ...DEFINE O ARQUIVO DE MALHA [JOBNAME].MSH...
+!
+!k*CFOPEN,fpso_roll,msh        ! ABERTURA DO ARQUIVO
+*CFOPEN,%FILENAME(1,1)%,msh
+!
+! ...IMPRESSAO DO MAPEAMENTO DE PRESCRICOES E COORDENADAS NODAIS...
+!       NUMNO    IC1      IC2      IC3      IC4     COORDX    COORDY   COORDZ
+*VWRITE,XYZ(1,1),XYZ(1,2),XYZ(1,3)
+%20.10E%20.10E%20.10E
+!
+! ...IMPRESSAO DA CONECTIVIDADE DA MALHA...
+!       NUMEL    NO1      NO2      NO3      MAT
+*VWRITE,IEN(1,2),IEN(1,3),IEN(1,4),IEN(1,5),IEN(1,6)
+%8I%8I%8I%8I%2I
+*CFCLOS                            ! FECHAMENTO DO ARQUIVO
+!..............................................................................................
+!
+! ...DEFINE O ARQUIVO DE PRESCRICOES E DADOS DE CONTROLE [JOBNAME].IN...
+!
+!k*CFOPEN,fpso_roll,in                                 ! ABERTURA DO ARQUIVO
+*CFOPEN,%FILENAME(1,1)%,in
+!
+! ...IMPRESSAO DE CABECALHO...
+  *VWRITE,' DADOS PARA O PROGRAMA EDGECFD'                  ! LINHA 1 = TITULO 
+          %-80C
+  *VWRITE,NNOEL  ,NUMEL ,NUMAT ,NDIM   ,NGL  ,NNOS ,NPAR   ! LINHA 2
+          %7I     %7I    %7I    %7I     %7I   %7I   %7I 
+  *VWRITE,MAXARM ,INWT  ,IMET  ,ISOLVER,KMAX1              ! LINHA 3
+          %7I     %7I    %7I    %7I     %7I
+  *VWRITE,IPRINT ,INL   ,MAXSLV,NOAD   ,NTAN               ! LINHA 4
+          %7I     %7I    %7I    %7I     %7I
+  *VWRITE,NFUN      ,NCAR  ,NCONDI                            ! LINHA 5
+          %7I     %7I    %7I  
+  *VWRITE,ALPHA  ,SIGMA0,SIGMA1,GAMMA  ,ETA0  ,ETAMAX,     ! LINHA 6
+          %10.3G  %10.3G %10.3G %10.3G  %10.3G %10.3G
+  *VWRITE,RTOL   ,DUTOL                                    ! LINHA 7
+          %10.3G  %10.3G 
+  *VWRITE,DT     ,TMAX                                     ! LINHA 8
+          %7.3F  %7.3F
+  *VWRITE,CFLMIN ,CFLMAX , TOL_V                           ! LINHA 9
+          %7.3F  %7.3F  %7.3F
+  *VWRITE,2      ,'CONSTANTE1'                             ! LINHA 10
+          %10I    %C
+  *VWRITE,0.0    ,1.0                                      ! LINHA 11
+          %10.3E  %7.3F
+  *VWRITE,1.0E+3 ,1.0                                      ! LINHA 12
+          %10.3E  %7.3F
+
+*IF,NFUN,EQ,2,THEN
+
+  *VWRITE,2      ,'CONSTANTE2'                             ! LINHA 10
+          %10I    %C
+  *VWRITE,0.0    ,1.0                                      ! LINHA 11
+          %10.3E  %7.3F
+  *VWRITE,1.0E+3 ,1.0                                      ! LINHA 12
+          %10.3E  %7.3F
+*ENDIF
+
+
+
+! ...IMPRESSAO DAS CONDICOES DE CONTORNO PARA VX
+  *VMASK ,INC(1,2)                 ! MASCARA PARA FILTRAR SOMENTE NOS COM PRESCRICOES DE VX
+!         NUMNO    -DOF VALDOF
+  *VWRITE,INC(1,1),-1  ,1   ,NDSET(1)     , VELX(1)
+%8I   %8I   %8I   %8I  %6.2F
+
+!
+! ...IMPRESSAO DAS CONDICOES DE CONTORNO PARA VY          
+  *VMASK ,INC(1,3)
+!         NUMNO    -DOF VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS COM PRESCRICOES DE VY
+  *VWRITE,INC(1,1),-2  ,1   ,NDSET(1)     , VELY(1)
+%8I   %8I   %8I   %8I  %6.2F
+!
+!
+! ...IMPRESSAO DAS CONDICOES DE CONTORNO PARA VZ          
+  *VMASK ,INC(1,4)
+!         NUMNO    -DOF VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS COM PRESCRICOES DE VZ
+  *VWRITE,INC(1,1),-3  ,1   ,NDSET(1)     , VELZ(1)
+%8I   %8I   %8I   %8I  %6.2F
+!
+!
+! ...IMPRESSAO DAS CONDICOES DE CONTORNO PARA PRES          
+  *VMASK ,INC(1,5)
+!         NUMNO    -DOF VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS COM PRESCRICOES DE PRES
+  *VWRITE,INC(1,1),-4  ,1   ,NDSET(1)     , PRESSAO(1)
+%8I   %8I   %8I   %8I  %6.2F
+!
+!
+! ...IMPRESSAO DAS CONDICOES DE CONTORNO PARA ESPECIE
+*IF,NSPEC,NE,0,THEN
+  *VMASK ,INC(1,6)
+!         NUMNO    -DOF VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS COM PRESCRICOES DE PRES
+  *VWRITE,INC(1,1),-5  ,1   ,NDSET(1)   ,SPECIE(1)
+%8I   %8I   %8I   %8I  %6.2F
+*ENDIF
+
+! ...IMPRESSAO DAS CONDICOES DE CONTORNO PARA FSI_UX          
+  *VMASK ,INC(1,7)
+!         NUMNO    -DOF VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS CONTIDOS EM WALL
+  *VWRITE,INC(1,1),-10  ,NFUN   ,NDSET(1)     , FSI_UX(1)
+%8I   %8I   %8I   %8I  %6.2F
+
+! ...IMPRESSAO DAS CONDICOES DE CONTORNO PARA FSI_UX          
+  *VMASK ,INC(1,8)
+!         NUMNO    -DOF VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS CONTIDOS EM WALL
+  *VWRITE,INC(1,1),-11  ,NFUN   ,NDSET(1)     , FSI_UY(1)
+%8I   %8I   %8I   %8I  %6.2F
+
+! ...IMPRESSAO DAS CONDICOES DE CONTORNO PARA FSI_UZ          
+  *VMASK ,INC(1,9)
+!         NUMNO    -DOF VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS CONTIDOS EM WALL
+  *VWRITE,INC(1,1),-12  ,NFUN   ,NDSET(1)     , FSI_UZ(1)
+%8I   %8I   %8I   %8I  %6.2F
+!
+! ...IMPRESSAO DAS CONDICOES INICIAIS PARA VX          
+  *VMASK ,ICI(1,1)
+!         NUMNO    DOF  VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS COM PRESCRICOES DE PRES
+  *VWRITE,INC(1,1),1   ,VX0(1)
+          %8I      %8I  %11.3E
+!
+!
+! ...IMPRESSAO DAS CONDICOES INICIAIS PARA VY          
+  *VMASK ,ICI(1,2)
+!         NUMNO    DOF  VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS COM PRESCRICOES DE PRES
+  *VWRITE,INC(1,1),2   ,VY0(1)
+          %8I      %8I  %11.3E
+!
+! ...IMPRESSAO DAS CONDICOES INICIAIS PARA VZ
+  *VMASK ,ICI(1,3)
+!         NUMNO    DOF  VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS COM PRESCRICOES DE PRES
+  *VWRITE,INC(1,1),3   ,VZ0(1)
+          %8I      %8I  %11.3E
+!
+*IF,NSPEC,NE,0,THEN
+  *VMASK ,ICI(1,4)
+!         NUMNO    DOF  VALDOF     ! MASCARA PARA FILTRAR SOMENTE NOS COM PRESCRICOES DE SPECIE
+  *VWRITE,INC(1,1),5   ,SP0(1)
+          %8I      %8I  %11.3E
+*ENDIF
+!
+*CFCLOS                            ! FECHAMENTO DO ARQUIVO
+
+*DEL,ALL
+!*UILIST,fpso_roll,MSH        ! ECOA O ARQ. GERADO DENTRO DO ANSYS
+!*UILIST,fpso_roll,IN         ! ECOA O ARQ. GERADO DENTRO DO ANSYS
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! LAMCE - LABORATÓRIO DE MÉTODOS COMPUTACIONAIS EM ENGENHARIA              !
+! EQUIPE: JOSÉ LUIS DRUMMOND ALVES                                         !
+!         CARLOS EDUARDO DA SILVA                                          !
+!         NESTOR GUEVARA JUNIOR                                            !
+!         LEANDRO CARLOS GAZONI                                            !
+!         BRUNO CORREA FERREIRA                                            !
+!         LUCAS DA SILVA ROCHA                                             !
+!                                                                          ! 
+!   SEÇÃO F(P)SO - ESTUDO DO MOVIMENTO DE JOGO DE UMA SEÇÃO DE F(P)SO      !
+!                                                                          !
+! AUTOR: LUCAS DA SILVA ROCHA (GRADUANDO EM ENGEHARIA NAVAL E OCEÂNICA)    !
+! DATA: 21/11/2012                                                         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!INÍCIO DA MACRO.                                                          !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+! -------------------- PARTE 1 COLETANDO NOMES -----------------------------
+
+
+
+
+ALLS
+
+
+
+!                                                         CAPTURA O NUMERO TOTAL DE COMPONENTES DE NO.
+!                                                         NCOM - ARMAZENA O NUMERO TOTAL DE COMPONENTES DE NO.
+NCOM = 0
+*GET,NCOM,COMP,1,NCOMP,IT1NUM,Item2,IT2NUM
+
+!CRIA UM VETOR DE CARACTERES
+*DIM,B,STRING,32,NCOM,1,,,
+
+!ESCREVE RELATORIO COM NOMES DAS COMPONENTES
+
+*DO,I,1,NCOM,1
+*GET, NAMECOM,COMP,I,NAME,IT1NUM,Item2,IT2NUM
+B(1,I) = NAMECOM
+*ENDDO
+
+
+
+! -------------------- PARTE 2 COLETANDO NUMERO DE NOS ----------------------
+
+
+
+!CRIA UM VETOR DE NUMEROS
+*DIM,N,ARRAY,NCOM,1,1,,,
+
+!CRIA UM ARQUIVO PARA INSERIR INFORMACOES
+*CFOPEN,RELATORIONUMEROS,txt
+
+!PEGANDO O NUMERO DE NOS NA COMPONENTE N
+
+*DO,I,1,NCOM,1
+CMSEL,,B(1,I)
+*GET, NNODES, NODE, 0, COUNT,
+N(I,1) = NNODES
+*ENDDO
+
+I=0
+!                                                          ESCREVE OS NUMEROS DE NOS DE CADA COMPONENTE
+*VWRITE,SEQU,B(1,1),N(1,1)
+%I %C %I
+
+*CFCLOS
+
+
+
+! ------------------- PARTE 3 - IMPRESSÃO DO CABECALHO -----------------------
+
+
+
+
+!                                                          CAPTURA O JOBNAME, E CRIA UM ARQUIVO COM ESSE NOME JOBNAME.GEO
+/INQUIRE,FILENAME,JOBNAME
+
+!FILENAME(1,1) = STRCAT(FILENAME(1,1),'')
+
+*CFOPEN,%FILENAME(1,1)%,geo
+
+!                                                          IMPRIME INFORMACOES DO CABECALHO     
+*VWRITE,'Programa EdgeCFD-ALE Versao 31/1','0/2012'
+%-32C%-6C
+
+! 														   CAPTURA O NUMERO TOTAL DE COMPONENTES - NCOM
+CMSEL,ALL,
+NCOM = 0
+*GET,NCOM,COMP,1,NCOMP,IT1NUM,Item2,IT2NUM
+
+*VWRITE,NCOM
+%-8I
+
+*VWRITE,'node id given'
+%-32C
+
+*VWRITE,'element id off'
+%-32C
+
+*VWRITE,'coordinates'
+%-32C
+
+!															SELECIONA OS NOS DA COMPONENTE 
+CMSEL,ALL
+
+!														    CONTA O NUMERO DE NOS DE COMPONENTES - NDNO
+*GET,NDNO,NODE,0,COUNT,
+
+*VWRITE,NDNO
+%-8I
+
+
+! ------------ PARTE 4 - IMPRIMINDO TODAS AS COMPONENTES ---------------------
+
+
+
+
+!															SELECIONA OS NOS DA COMPONENTE 
+CMSEL,ALL
+
+!															CONTA O NUMERO DE NOS DE COMPONENTES - NDNO
+*GET,NDNO,NODE,0,COUNT,
+
+NUMER=
+!                                                           CRIA UM ARRAY COM ESSE NUMERO DE NOS
+*DIM,NUMER,ARRAY,NDNO,1,1
+
+
+XYZN=
+!															CRIA UM ARRAY DE INDICES COM O NUMERO TOTAL DE NOS DA COMPONENTE
+*DIM,XYZN,ARRAY,NDNO,3,1
+
+
+!                                                           LISTA O INDICE DOS NOS
+*VGET,NUMER(1,1),NODE,,NLIST,
+
+
+! ***  ***  BEGIN KADU ***  ***  
+
+!*VGET,XYZN(1,1),NODE,NUMER(1,1),LOC,X,,,2,
+!*VGET,XYZN(1,2),NODE,NUMER(1,1),LOC,Y,,,2,
+!*VGET,XYZN(1,3),NODE,NUMER(1,1),LOC,Z,,,2,
+
+NOCOUNT = 0
+ALLS
+*GET,NUMNP,NODE,0,COUNT,
+
+NSEL,U, , ,ALL
+CMSEL,ALL
+
+
+*DO,I,1,NUMNP,1
+	
+*GET,NODESEL,NODE,I,NSEL,
+
+*IF,NODESEL,EQ,1,THEN
+NOCOUNT = NOCOUNT + 1	
+													
+*GET,XYZN(NOCOUNT,1),NODE,I,LOC,X,
+*GET,XYZN(NOCOUNT,2),NODE,I,LOC,Y,
+*GET,XYZN(NOCOUNT,3),NODE,I,LOC,Z,
+
+*ENDIF
+
+*ENDDO
+
+
+
+! ***  ***  END KADU ***  ***  
+
+!															IMPRIME OS INDICES E AS COORDENADAS 
+
+*VWRITE,NUMER(1,1),XYZN(1,1),XYZN(1,2),XYZN(1,3)
+%-8I%-12.5E%-12.5E%-12.5E  
+
+
+
+! ---------------- PARTE 5 - IMPRIMINDO OS NOS DAS COMPONENTES SEPARADAMENTE ---------------
+
+
+
+
+! 															CAPTURA O NUMERO TOTAL DE COMPONENTES - NCOM
+CMSEL,ALL,
+NCOM = 0
+*GET,NCOM,COMP,1,NCOMP,IT1NUM,Item2,IT2NUM
+
+ 
+!                                         	       			SELECIONA TODAS AS COMPONENTES EM ORDEM
+
+!															CRIA O ARQUIVO PARA ESCREVER AS INFORMACOES
+!*DIM,FILENAME,STRING,32,1,1,,,
+
+!                                                           -- INICIO DO LOOP --
+
+*DO,I,1,NCOM,1
+
+
+!															CAPTURA O NOME DA COMPONENTE I - NAMECOM
+*GET,NAMECOM,COMP,I,NAME,
+
+!															SELECIONA OS NOS DA COMPONENTE 
+CMSEL,,NAMECOM
+
+!															CONTA O NUMERO DE NOS DA COMPONENTE - NDNO
+*GET,NDNO,NODE,0,COUNT,
+
+NUMER=
+!                                                           CRIA UM ARRAY COM ESSE NUMERO DOS NOS
+*DIM,NUMER,ARRAY,NDNO,1,1
+
+
+XYZN=
+!															CRIA OUTRO ARRAY COM O NUMERO TOTAL DE NOS DA COMPONENTE
+*DIM,XYZN,ARRAY,NDNO,3,1
+
+
+!                                                           LISTA O INDICE DOS NOS
+*VGET,NUMER(1,1),NODE,,NLIST,
+
+
+
+!														     IMPRIME O TITULO DA COMPONENTE
+*VWRITE,'part', I
+%-4C %-1I
+
+
+*VWRITE,NAMECOM
+%-23C
+
+!                                                            IMPRIME O ELEMENTO
+*VWRITE,'point'
+%C
+
+*VWRITE,NDNO
+%-8I
+
+
+!														     IMPRIME AS COORDENADAS 
+
+*VWRITE,NUMER(1,1),
+%-8I
+
+*ENDDO
+
+
+
+!    ----------------------------------------------------  FIM DO LOOP   ---
+
+
+*CFCLOS
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!FINAL DA MACRO.                                                           !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*DEL,ALL

@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="Imagens">
+    <file>icons/Edge.ico</file>
+	<file>icons/about.bmp</file>
+	<file>icons/ansys.bmp</file>
+	<file>icons/cancel.bmp</file>
+	
+	<file>icons/Edge.bmp</file>
+	<file>icons/open.bmp</file>
+	<file>icons/save.bmp</file>
+	
+   </qresource>
+</RCC>

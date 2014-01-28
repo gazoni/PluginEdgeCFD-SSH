@@ -1,0 +1,18 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/icons">
+  <!-- Typical file operations. -->
+
+   <file>ansys.bmp</file>
+   <file>Edge.bmp</file>
+   <file>cancel.bmp</file>
+   <file>Edge.ico</file>
+   <file>open.bmp</file>
+   <file>save.bmp</file>
+
+    <!-- Help -->
+   <file>about.bmp</file>
+   </qresource>
+</RCC>
+
+ 

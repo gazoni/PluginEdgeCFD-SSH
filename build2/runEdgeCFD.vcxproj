@@ -1,0 +1,1170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{1E8E383C-7DD7-4857-9486-B5FF4FC4C84E}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>runEdgeCFD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">runEdgeCFD.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">runEdgeCFD</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">runEdgeCFD.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">runEdgeCFD</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">runEdgeCFD.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">runEdgeCFD</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">runEdgeCFD.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">runEdgeCFD</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_GUI_LIBS;QT_CORE_LIB;QT3_SUPPORT;QT_DLL;QT_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/Debug/runEdgeCFD.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_GUI_LIBS;QT_CORE_LIB;QT3_SUPPORT;QT_DLL;QT_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\4.8.2-x64\lib\qtmaind.lib;C:\VTK\lib\vtk-5.10\QVTK.lib;C:\Qt\4.8.2-x64\lib\QtGuid4.lib;C:\Qt\4.8.2-x64\lib\QtCored4.lib;C:\VTK\lib\vtk-5.10\vtkRendering.lib;C:\VTK\lib\vtk-5.10\vtkIO.lib;C:\VTK\lib\vtk-5.10\vtkCommon.lib;FlowSshC64.lib;C:\Qt\4.8.2-x64\lib\QtSqld4.lib;C:\Qt\4.8.2-x64\lib\QtNetworkd4.lib;C:\VTK\lib\vtk-5.10\vtkViews.lib;C:\VTK\lib\vtk-5.10\vtkInfovis.lib;C:\VTK\lib\vtk-5.10\vtkWidgets.lib;C:\VTK\lib\vtk-5.10\vtkHybrid.lib;C:\VTK\lib\vtk-5.10\vtkVolumeRendering.lib;C:\VTK\lib\vtk-5.10\vtkGraphics.lib;C:\VTK\lib\vtk-5.10\vtkImaging.lib;C:\VTK\lib\vtk-5.10\vtkFiltering.lib;C:\VTK\lib\vtk-5.10\vtksys.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\PROMEC\Desktop\PluginEdgeCFD\FlowSsh\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/Debug/runEdgeCFD.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/Debug/runEdgeCFD.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_GUI_LIBS;QT_CORE_LIB;QT3_SUPPORT;QT_DLL;QT_NO_DEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/Release/runEdgeCFD.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_GUI_LIBS;QT_CORE_LIB;QT3_SUPPORT;QT_DLL;QT_NO_DEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\4.8.2-x64\lib\qtmain.lib;FlowSsh/lib/FlowSshC64.lib;C:\VTK\lib\vtk-5.10\QVTK.lib;C:\Qt\4.8.2-x64\lib\QtGui4.lib;C:\Qt\4.8.2-x64\lib\QtCore4.lib;C:\VTK\lib\vtk-5.10\vtkRendering.lib;C:\VTK\lib\vtk-5.10\vtkIO.lib;C:\VTK\lib\vtk-5.10\vtkCommon.lib;FlowSshC64.lib;C:\Qt\4.8.2-x64\lib\QtGuid4.lib;C:\Qt\4.8.2-x64\lib\QtSqld4.lib;C:\Qt\4.8.2-x64\lib\QtNetworkd4.lib;C:\Qt\4.8.2-x64\lib\QtCored4.lib;C:\VTK\lib\vtk-5.10\vtkViews.lib;C:\VTK\lib\vtk-5.10\vtkInfovis.lib;C:\VTK\lib\vtk-5.10\vtkWidgets.lib;C:\VTK\lib\vtk-5.10\vtkHybrid.lib;C:\VTK\lib\vtk-5.10\vtkVolumeRendering.lib;C:\VTK\lib\vtk-5.10\vtkRendering.lib;C:\VTK\lib\vtk-5.10\vtkGraphics.lib;C:\VTK\lib\vtk-5.10\vtkImaging.lib;C:\VTK\lib\vtk-5.10\vtkIO.lib;C:\VTK\lib\vtk-5.10\vtkFiltering.lib;C:\VTK\lib\vtk-5.10\vtkCommon.lib;C:\VTK\lib\vtk-5.10\vtksys.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/Release/runEdgeCFD.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/Release/runEdgeCFD.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_GUI_LIBS;QT_CORE_LIB;QT3_SUPPORT;QT_DLL;QT_NO_DEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/MinSizeRel/runEdgeCFD.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_GUI_LIBS;QT_CORE_LIB;QT3_SUPPORT;QT_DLL;QT_NO_DEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\4.8.2-x64\lib\qtmain.lib;FlowSsh/lib/FlowSshC64.lib;C:\VTK\lib\vtk-5.10\QVTK.lib;C:\Qt\4.8.2-x64\lib\QtGui4.lib;C:\Qt\4.8.2-x64\lib\QtCore4.lib;C:\VTK\lib\vtk-5.10\vtkRendering.lib;C:\VTK\lib\vtk-5.10\vtkIO.lib;C:\VTK\lib\vtk-5.10\vtkCommon.lib;FlowSshC64.lib;C:\Qt\4.8.2-x64\lib\QtGuid4.lib;C:\Qt\4.8.2-x64\lib\QtSqld4.lib;C:\Qt\4.8.2-x64\lib\QtNetworkd4.lib;C:\Qt\4.8.2-x64\lib\QtCored4.lib;C:\VTK\lib\vtk-5.10\vtkViews.lib;C:\VTK\lib\vtk-5.10\vtkInfovis.lib;C:\VTK\lib\vtk-5.10\vtkWidgets.lib;C:\VTK\lib\vtk-5.10\vtkHybrid.lib;C:\VTK\lib\vtk-5.10\vtkVolumeRendering.lib;C:\VTK\lib\vtk-5.10\vtkRendering.lib;C:\VTK\lib\vtk-5.10\vtkGraphics.lib;C:\VTK\lib\vtk-5.10\vtkImaging.lib;C:\VTK\lib\vtk-5.10\vtkIO.lib;C:\VTK\lib\vtk-5.10\vtkFiltering.lib;C:\VTK\lib\vtk-5.10\vtkCommon.lib;C:\VTK\lib\vtk-5.10\vtksys.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/MinSizeRel/runEdgeCFD.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/MinSizeRel/runEdgeCFD.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_GUI_LIBS;QT_CORE_LIB;QT3_SUPPORT;QT_DLL;QT_NO_DEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/RelWithDebInfo/runEdgeCFD.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_GUI_LIBS;QT_CORE_LIB;QT3_SUPPORT;QT_DLL;QT_NO_DEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/VTK/include/vtk-5.10;C:/Qt/4.8.2-x64/include;C:/Qt/4.8.2-x64/include/QtGui;C:/Qt/4.8.2-x64/include/QtCore;C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2;C:/Users/PROMEC/Desktop/PluginEdgeCFD;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/include;C:/Users/PROMEC/Desktop/PluginEdgeCFD/FlowSsh/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\4.8.2-x64\lib\qtmain.lib;FlowSsh/lib/FlowSshC64.lib;C:\VTK\lib\vtk-5.10\QVTK.lib;C:\Qt\4.8.2-x64\lib\QtGui4.lib;C:\Qt\4.8.2-x64\lib\QtCore4.lib;C:\VTK\lib\vtk-5.10\vtkRendering.lib;C:\VTK\lib\vtk-5.10\vtkIO.lib;C:\VTK\lib\vtk-5.10\vtkCommon.lib;FlowSshC64.lib;C:\Qt\4.8.2-x64\lib\QtGuid4.lib;C:\Qt\4.8.2-x64\lib\QtSqld4.lib;C:\Qt\4.8.2-x64\lib\QtNetworkd4.lib;C:\Qt\4.8.2-x64\lib\QtCored4.lib;C:\VTK\lib\vtk-5.10\vtkViews.lib;C:\VTK\lib\vtk-5.10\vtkInfovis.lib;C:\VTK\lib\vtk-5.10\vtkWidgets.lib;C:\VTK\lib\vtk-5.10\vtkHybrid.lib;C:\VTK\lib\vtk-5.10\vtkVolumeRendering.lib;C:\VTK\lib\vtk-5.10\vtkRendering.lib;C:\VTK\lib\vtk-5.10\vtkGraphics.lib;C:\VTK\lib\vtk-5.10\vtkImaging.lib;C:\VTK\lib\vtk-5.10\vtkIO.lib;C:\VTK\lib\vtk-5.10\vtkFiltering.lib;C:\VTK\lib\vtk-5.10\vtkCommon.lib;C:\VTK\lib\vtk-5.10\vtksys.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/RelWithDebInfo/runEdgeCFD.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/RelWithDebInfo/runEdgeCFD.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\configansys.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ui_configansys.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_configansys.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/configansys.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/configansys.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\configansys.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_configansys.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ui_configansys.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_configansys.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/configansys.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/configansys.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\configansys.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_configansys.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating ui_configansys.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_configansys.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/configansys.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/configansys.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\configansys.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_configansys.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating ui_configansys.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_configansys.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/configansys.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/configansys.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\configansys.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_configansys.h</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\menuAnsys.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ui_menuAnsys.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_menuAnsys.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/menuAnsys.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/menuAnsys.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\menuAnsys.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_menuAnsys.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ui_menuAnsys.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_menuAnsys.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/menuAnsys.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/menuAnsys.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\menuAnsys.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_menuAnsys.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating ui_menuAnsys.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_menuAnsys.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/menuAnsys.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/menuAnsys.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\menuAnsys.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_menuAnsys.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating ui_menuAnsys.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_menuAnsys.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/menuAnsys.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/menuAnsys.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\menuAnsys.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_menuAnsys.h</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\runedgecfd.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ui_runedgecfd.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_runedgecfd.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/runedgecfd.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/runedgecfd.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\runedgecfd.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_runedgecfd.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ui_runedgecfd.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_runedgecfd.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/runedgecfd.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/runedgecfd.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\runedgecfd.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_runedgecfd.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating ui_runedgecfd.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_runedgecfd.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/runedgecfd.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/runedgecfd.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\runedgecfd.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_runedgecfd.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating ui_runedgecfd.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\uic.exe -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ui_runedgecfd.h C:/Users/PROMEC/Desktop/PluginEdgeCFD/runedgecfd.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/runedgecfd.ui;C:\Users\PROMEC\Desktop\PluginEdgeCFD\runedgecfd.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\ui_runedgecfd.h</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/PROMEC/Desktop/PluginEdgeCFD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/PROMEC/Desktop/PluginEdgeCFD -BC:/Users/PROMEC/Desktop/PluginEdgeCFD/build2 --check-stamp-file C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/CMakeLists.txt;C:\Users\PROMEC\Desktop\PluginEdgeCFD\CMakeLists.txt;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeSystem.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeCCompiler.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\VTK\lib\vtk-5.10\VTKConfigVersion.cmake;C:\VTK\lib\vtk-5.10\VTKConfig.cmake;C:\VTK\lib\vtk-5.10\VTKConfigQt.cmake;C:\VTK\lib\vtk-5.10\VTKTargets.cmake;C:\VTK\lib\vtk-5.10\VTKTargets-debug.cmake;C:\VTK\lib\vtk-5.10\UseVTK.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\VTK\lib\vtk-5.10\CMake\vtkMakeInstantiator.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\UseQt4.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\runedgecfd.qrc;C:\Users\PROMEC\Desktop\PluginEdgeCFD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/PROMEC/Desktop/PluginEdgeCFD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/PROMEC/Desktop/PluginEdgeCFD -BC:/Users/PROMEC/Desktop/PluginEdgeCFD/build2 --check-stamp-file C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/CMakeLists.txt;C:\Users\PROMEC\Desktop\PluginEdgeCFD\CMakeLists.txt;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeSystem.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeCCompiler.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\VTK\lib\vtk-5.10\VTKConfigVersion.cmake;C:\VTK\lib\vtk-5.10\VTKConfig.cmake;C:\VTK\lib\vtk-5.10\VTKConfigQt.cmake;C:\VTK\lib\vtk-5.10\VTKTargets.cmake;C:\VTK\lib\vtk-5.10\VTKTargets-debug.cmake;C:\VTK\lib\vtk-5.10\UseVTK.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\VTK\lib\vtk-5.10\CMake\vtkMakeInstantiator.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\UseQt4.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\runedgecfd.qrc;C:\Users\PROMEC\Desktop\PluginEdgeCFD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/PROMEC/Desktop/PluginEdgeCFD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/PROMEC/Desktop/PluginEdgeCFD -BC:/Users/PROMEC/Desktop/PluginEdgeCFD/build2 --check-stamp-file C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/CMakeLists.txt;C:\Users\PROMEC\Desktop\PluginEdgeCFD\CMakeLists.txt;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeSystem.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeCCompiler.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\VTK\lib\vtk-5.10\VTKConfigVersion.cmake;C:\VTK\lib\vtk-5.10\VTKConfig.cmake;C:\VTK\lib\vtk-5.10\VTKConfigQt.cmake;C:\VTK\lib\vtk-5.10\VTKTargets.cmake;C:\VTK\lib\vtk-5.10\VTKTargets-debug.cmake;C:\VTK\lib\vtk-5.10\UseVTK.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\VTK\lib\vtk-5.10\CMake\vtkMakeInstantiator.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\UseQt4.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\runedgecfd.qrc;C:\Users\PROMEC\Desktop\PluginEdgeCFD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/PROMEC/Desktop/PluginEdgeCFD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/PROMEC/Desktop/PluginEdgeCFD -BC:/Users/PROMEC/Desktop/PluginEdgeCFD/build2 --check-stamp-file C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/CMakeLists.txt;C:\Users\PROMEC\Desktop\PluginEdgeCFD\CMakeLists.txt;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeSystem.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeCCompiler.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\VTK\lib\vtk-5.10\VTKConfigVersion.cmake;C:\VTK\lib\vtk-5.10\VTKConfig.cmake;C:\VTK\lib\vtk-5.10\VTKConfigQt.cmake;C:\VTK\lib\vtk-5.10\VTKTargets.cmake;C:\VTK\lib\vtk-5.10\VTKTargets-debug.cmake;C:\VTK\lib\vtk-5.10\UseVTK.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\VTK\lib\vtk-5.10\CMake\vtkMakeInstantiator.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\UseQt4.cmake;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\runedgecfd.qrc;C:\Users\PROMEC\Desktop\PluginEdgeCFD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\dccf65bfba358a111eb0112e7dcb4173\moc_configansys.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_configansys.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_configansys.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_configansys.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\configansys.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_configansys.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_configansys.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_configansys.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_configansys.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\configansys.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_configansys.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating moc_configansys.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_configansys.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_configansys.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\configansys.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_configansys.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating moc_configansys.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_configansys.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_configansys.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\configansys.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_configansys.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\dccf65bfba358a111eb0112e7dcb4173\moc_formOrdenado.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_formOrdenado.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_formOrdenado.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_formOrdenado.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\formOrdenado.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_formOrdenado.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_formOrdenado.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_formOrdenado.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_formOrdenado.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\formOrdenado.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_formOrdenado.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating moc_formOrdenado.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_formOrdenado.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_formOrdenado.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\formOrdenado.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_formOrdenado.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating moc_formOrdenado.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_formOrdenado.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_formOrdenado.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\formOrdenado.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_formOrdenado.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\dccf65bfba358a111eb0112e7dcb4173\moc_forms.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_forms.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_forms.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_forms.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\forms.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_forms.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_forms.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_forms.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_forms.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\forms.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_forms.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating moc_forms.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_forms.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_forms.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\forms.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_forms.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating moc_forms.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_forms.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_forms.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\forms.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_forms.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\dccf65bfba358a111eb0112e7dcb4173\moc_io.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_io.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_io.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_io.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\io.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_io.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_io.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_io.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_io.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\io.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_io.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating moc_io.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_io.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_io.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\io.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_io.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating moc_io.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_io.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_io.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\io.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_io.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\dccf65bfba358a111eb0112e7dcb4173\moc_resource.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_resource.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_resource.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating moc_resource.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating moc_resource.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\dccf65bfba358a111eb0112e7dcb4173\moc_resource1.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_resource1.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource1.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource1.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource1.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource1.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_resource1.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource1.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource1.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource1.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource1.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating moc_resource1.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource1.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource1.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource1.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource1.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating moc_resource1.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource1.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource1.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource1.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource1.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\dccf65bfba358a111eb0112e7dcb4173\moc_resource2.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_resource2.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource2.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource2.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource2.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource2.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_resource2.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource2.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource2.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource2.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource2.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating moc_resource2.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource2.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource2.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource2.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource2.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating moc_resource2.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_resource2.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_resource2.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\resource2.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_resource2.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\dccf65bfba358a111eb0112e7dcb4173\moc_runedgecfd.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_runedgecfd.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_runedgecfd.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_runedgecfd.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\runedgecfd.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_runedgecfd.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_runedgecfd.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_runedgecfd.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_runedgecfd.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\runedgecfd.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_runedgecfd.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating moc_runedgecfd.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_runedgecfd.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_runedgecfd.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\runedgecfd.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_runedgecfd.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating moc_runedgecfd.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_runedgecfd.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_runedgecfd.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\runedgecfd.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_runedgecfd.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\dccf65bfba358a111eb0112e7dcb4173\moc_ViewVtk.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_ViewVtk.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_ViewVtk.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_ViewVtk.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\ViewVtk.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_ViewVtk.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_ViewVtk.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_ViewVtk.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_ViewVtk.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\ViewVtk.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_ViewVtk.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating moc_ViewVtk.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_ViewVtk.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_ViewVtk.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\ViewVtk.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_ViewVtk.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating moc_ViewVtk.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.2-x64\bin\moc.exe @moc_ViewVtk.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/dccf65bfba358a111eb0112e7dcb4173/moc_ViewVtk.cxx.rule;C:\Users\PROMEC\Desktop\PluginEdgeCFD\ViewVtk.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\moc_ViewVtk.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\icons\runedgecfd.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating qrc_runedgecfd.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\rcc.exe -name runedgecfd -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/qrc_runedgecfd.cxx C:/Users/PROMEC/Desktop/PluginEdgeCFD/icons/runedgecfd.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/icons/runedgecfd.qrc;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\ansys.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\Edge.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\cancel.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\Edge.ico;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\open.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\save.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\about.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\icons\runedgecfd.qrc.depends;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\runedgecfd.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\qrc_runedgecfd.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating qrc_runedgecfd.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\rcc.exe -name runedgecfd -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/qrc_runedgecfd.cxx C:/Users/PROMEC/Desktop/PluginEdgeCFD/icons/runedgecfd.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/icons/runedgecfd.qrc;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\ansys.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\Edge.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\cancel.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\Edge.ico;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\open.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\save.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\about.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\icons\runedgecfd.qrc.depends;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\runedgecfd.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\qrc_runedgecfd.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating qrc_runedgecfd.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\rcc.exe -name runedgecfd -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/qrc_runedgecfd.cxx C:/Users/PROMEC/Desktop/PluginEdgeCFD/icons/runedgecfd.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/icons/runedgecfd.qrc;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\ansys.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\Edge.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\cancel.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\Edge.ico;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\open.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\save.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\about.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\icons\runedgecfd.qrc.depends;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\runedgecfd.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\qrc_runedgecfd.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating qrc_runedgecfd.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Qt\4.8.2-x64\bin\rcc.exe -name runedgecfd -o C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/qrc_runedgecfd.cxx C:/Users/PROMEC/Desktop/PluginEdgeCFD/icons/runedgecfd.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PROMEC/Desktop/PluginEdgeCFD/icons/runedgecfd.qrc;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\ansys.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\Edge.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\cancel.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\Edge.ico;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\open.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\save.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\about.bmp;C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\icons\runedgecfd.qrc.depends;C:\Users\PROMEC\Desktop\PluginEdgeCFD\icons\runedgecfd.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\qrc_runedgecfd.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ui_configansys.h" />
+    <ClInclude Include="ui_menuAnsys.h" />
+    <ClInclude Include="ui_runedgecfd.h" />
+    <ClInclude Include="..\configansys.h" />
+    <ClInclude Include="..\formOrdenado.h" />
+    <ClInclude Include="..\forms.h" />
+    <ClInclude Include="..\io.h" />
+    <ClInclude Include="..\resource.h" />
+    <ClInclude Include="..\resource1.h" />
+    <ClInclude Include="..\resource2.h" />
+    <ClInclude Include="..\runedgecfd.h" />
+    <ClInclude Include="..\ViewVtk.h" />
+    <ClCompile Include="..\configansys.cpp" />
+    <ClCompile Include="..\io.cpp" />
+    <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\runedgecfd.cpp" />
+    <ClCompile Include="..\ViewVtk.cpp" />
+    <ClCompile Include="moc_configansys.cxx" />
+    <ClCompile Include="moc_formOrdenado.cxx" />
+    <ClCompile Include="moc_forms.cxx" />
+    <ClCompile Include="moc_io.cxx" />
+    <ClCompile Include="moc_resource.cxx" />
+    <ClCompile Include="moc_resource1.cxx" />
+    <ClCompile Include="moc_resource2.cxx" />
+    <ClCompile Include="moc_runedgecfd.cxx" />
+    <ClCompile Include="moc_ViewVtk.cxx" />
+    <ClCompile Include="qrc_runedgecfd.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/ZERO_CHECK.vcxproj">
+      <Project>8B2EE7DF-1922-4712-A103-A4C2555D18A9</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,55 @@
+﻿Build started 7/2/2013 7:37:58 PM.
+     1>Project "C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\runEdgeCFD.vcxproj" on node 2 (build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(298,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+     1>InitializeBuildStatus:
+         Creating "x64\Release\runEdgeCFD.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Qt\4.8.2-x64\include\QtCore" /I"C:\Qt\4.8.2-x64\include\QtGui" /I"C:\Qt\4.8.2-x64\include\QtOpenGL" /I"C:\Qt\4.8.2-x64\include\QtXml" /I"C:\Qt\4.8.2-x64\include" /IGeneratedFiles /I. /IGeneratedFiles\Debug /I"C:\Qt\4.8.2-x64\include\ActiveQt" /IGeneratedFiles\release /IGeneratedFiles /I"C:\Qt\4.8.2-x64\mkspecs\win32-msvc2010" /I.\GeneratedFiles /Zi /nologo /W3 /WX- /O2 /D _WINDOWS /D NDEBUG /D QT_CORE_LIB /D QT_DLL /D QT_DLL /D QT_GUI_LIB /D QT_HAVE_3DNOW /D QT_HAVE_MMX /D QT_HAVE_MMXEXT /D QT_HAVE_SSE /D QT_HAVE_SSE2 /D QT_LARGEFILE_SUPPORT /D QT_LARGEFILE_SUPPORT /D QT_LARGEFILE_SUPPORT /D QT_NO_DEBUG /D QT_OPENGL_LIB /D QT_THREAD_SUPPORT /D QT_XML_LIB /D UNICODE /D UNICODE /D WIN32 /D WIN32 /Gm- /EHsc /MD /GS- /fp:precise /Zc:wchar_t- /Zc:forScope /GR /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt io.cpp runedgecfd.cpp -Zm200 -w34100 -w34189 
+         io.cpp
+     1>io.cpp(40): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : see declaration of 'freopen'
+     1>io.cpp(105): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : see declaration of 'freopen'
+     1>io.cpp(64): warning C4100: 'ui' : unreferenced formal parameter
+     1>io.cpp(123): warning C4101: 'idTemp' : unreferenced local variable
+     1>io.cpp(79): warning C4189: 'indexlabel' : local variable is initialized but not referenced
+     1>io.cpp(197): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : see declaration of 'freopen'
+     1>io.cpp(293): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : see declaration of 'freopen'
+     1>io.cpp(317): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : see declaration of 'freopen'
+     1>io.cpp(398): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : see declaration of 'freopen'
+     1>io.cpp(386): warning C4100: 'ui' : unreferenced formal parameter
+         runedgecfd.cpp
+     1>runedgecfd.cpp(5): warning C4273: 'SetFileAttributesW' : inconsistent dll linkage
+                 C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\include\winbase.h(9365) : see previous definition of 'SetFileAttributesW'
+     1>runedgecfd.cpp(1105): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdlib.h(433) : see declaration of 'getenv'
+         Generating Code...
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"bin\\runEdgeCFD.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Qt\4.8.2-x64\lib" /LIBPATH:"C:\Qt\4.8.2-x64\lib" glu32.lib opengl32.lib gdi32.lib user32.lib "C:\Qt\4.8.2-x64\lib\qtmain.lib" opengl32.lib glu32.lib "C:\Qt\4.8.2-x64\lib\QtXml4.lib" "C:\Qt\4.8.2-x64\lib\QtOpenGL4.lib" "C:\Qt\4.8.2-x64\lib\QtGui4.lib" "C:\Qt\4.8.2-x64\lib\QtCore4.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Release\runEdgeCFD.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\bin\runEdgeCFD.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 x64\Release\runEdgeCFD.res
+         x64\Release\configansys.obj
+         x64\Release\qrc_runedgecfd.obj
+         x64\Release\moc_configansys.obj
+         x64\Release\moc_runedgecfd.obj
+         x64\Release\io.obj
+         x64\Release\main.obj
+         x64\Release\runedgecfd.obj "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"  /SUBSYSTEM:WINDOWS 
+         runEdgeCFD.vcxproj -> C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\bin\runEdgeCFD.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"bin\\runEdgeCFD.exe;#1" /manifest x64\Release\runEdgeCFD.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\runEdgeCFD.unsuccessfulbuild".
+         Touching "x64\Release\runEdgeCFD.lastbuildstate".
+     1>Done Building Project "C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\runEdgeCFD.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.99

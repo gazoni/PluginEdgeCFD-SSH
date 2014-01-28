@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\configansys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\io.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\runedgecfd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ViewVtk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_configansys.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_formOrdenado.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_forms.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_io.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_resource.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_resource1.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_resource2.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_runedgecfd.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_ViewVtk.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="qrc_runedgecfd.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ui_configansys.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_menuAnsys.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_runedgecfd.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\configansys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\formOrdenado.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\forms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\resource2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\runedgecfd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ViewVtk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh\include\libssh\libssh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh\include\libssh\ssh2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\configansys.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\menuAnsys.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\runedgecfd.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\CMakeLists.txt" />
+    <CustomBuild Include="CMakeFiles\3343b67ada958a1cabe4e128ffc5570b\moc_configansys.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\3343b67ada958a1cabe4e128ffc5570b\moc_formOrdenado.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\3343b67ada958a1cabe4e128ffc5570b\moc_forms.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\3343b67ada958a1cabe4e128ffc5570b\moc_io.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\3343b67ada958a1cabe4e128ffc5570b\moc_resource.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\3343b67ada958a1cabe4e128ffc5570b\moc_resource1.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\3343b67ada958a1cabe4e128ffc5570b\moc_resource2.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\3343b67ada958a1cabe4e128ffc5570b\moc_runedgecfd.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMakeFiles\3343b67ada958a1cabe4e128ffc5570b\moc_ViewVtk.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\icons\runedgecfd.qrc">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CAFD5583-558D-4D94-B77E-3BC074434F01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{F5EAD5CE-6F4F-4F25-BFCD-D1A516368539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{70468D6F-B79A-441E-A8C1-752BF771652C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{CE8A522A-0B60-48EC-889D-C1E424A2727C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{8A2EEA3E-34FD-494D-BB0B-1835254BCF57}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

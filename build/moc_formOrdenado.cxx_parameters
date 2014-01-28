@@ -1,0 +1,14 @@
+-IC:/VTK/include/vtk-5.10
+-IC:/Qt/4.8.2-x64/include
+-IC:/Qt/4.8.2-x64/include/QtGui
+-IC:/Qt/4.8.2-x64/include/QtCore
+-IC:/Qt/4.8.2-x64/include
+-IC:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build
+-IC:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD
+-DQT_DLL
+-DQT_GUI_LIB
+-DQT_CORE_LIB
+-DWIN32
+-o
+C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/build/moc_formOrdenado.cxx
+C:/Users/PROMEC/Documents/LAMCE/EDGE_CFD/RunEdgeCFD/PluginEdgeCFD/formOrdenado.h

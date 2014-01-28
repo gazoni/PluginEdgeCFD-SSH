@@ -1,0 +1,261 @@
+The system is: Windows - 6.1 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: CompilerIdC, Configuration: Debug x64 ------
+1>Build started 23/01/2014 22:02:54.
+1>InitializeBuildStatus:
+1>  Creating "Debug\CompilerIdC.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  CMakeCCompilerId.c
+1>Link:
+1>  CompilerIdC.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CompilerIdC\.\CompilerIdC.exe
+1>PostBuildEvent:
+1>  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\cl.exe
+1>FinalizeBuildStatus:
+1>  Deleting file "Debug\CompilerIdC.unsuccessfulbuild".
+1>  Touching "Debug\CompilerIdC.lastbuildstate".
+1>
+1>Build succeeded.
+1>
+1>Time Elapsed 00:00:02.30
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj.user"
+
+The C compiler identification is MSVC, found in "C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/2.8.11/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: CompilerIdCXX, Configuration: Debug x64 ------
+1>Build started 23/01/2014 22:02:58.
+1>InitializeBuildStatus:
+1>  Creating "Debug\CompilerIdCXX.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  CMakeCXXCompilerId.cpp
+1>Link:
+1>  CompilerIdCXX.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\2.8.11\CompilerIdCXX\.\CompilerIdCXX.exe
+1>PostBuildEvent:
+1>  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\cl.exe
+1>FinalizeBuildStatus:
+1>  Deleting file "Debug\CompilerIdCXX.unsuccessfulbuild".
+1>  Touching "Debug\CompilerIdCXX.lastbuildstate".
+1>
+1>Build succeeded.
+1>
+1>Time Elapsed 00:00:00.63
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj.user"
+
+The CXX compiler identification is MSVC, found in "C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/2.8.11/CompilerIdCXX/CompilerIdCXX.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp
+
+Run Build Command:c:\PROGRA~2\MICROS~2.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec2982437289
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: cmTryCompileExec2982437289, Configuration: Debug x64 ------
+1>Build started 23/01/2014 22:03:01.
+1>PrepareForBuild:
+1>  Creating directory "C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\".
+1>InitializeBuildStatus:
+1>  Creating "cmTryCompileExec2982437289.dir\Debug\cmTryCompileExec2982437289.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+1>  Copyright (C) Microsoft Corporation.  All rights reserved.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2982437289.dir\Debug\\" /Fd"C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2982437289.pdb" /Gd /TC /errorReport:prompt testCCompiler.c
+1>  
+1>  testCCompiler.c
+1>Link:
+1>  cmTryCompileExec2982437289.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2982437289.exe
+1>LinkEmbedManifest:
+1>  cmTryCompileExec2982437289.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2982437289.exe
+1>FinalizeBuildStatus:
+1>  Deleting file "cmTryCompileExec2982437289.dir\Debug\cmTryCompileExec2982437289.unsuccessfulbuild".
+1>  Touching "cmTryCompileExec2982437289.dir\Debug\cmTryCompileExec2982437289.lastbuildstate".
+1>
+1>Build succeeded.
+1>
+1>Time Elapsed 00:00:02.42
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp
+
+Run Build Command:c:\PROGRA~2\MICROS~2.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec990043934
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: cmTryCompileExec990043934, Configuration: Debug x64 ------
+1>Build started 23/01/2014 22:03:05.
+1>PrepareForBuild:
+1>  Creating directory "C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\".
+1>InitializeBuildStatus:
+1>  Creating "cmTryCompileExec990043934.dir\Debug\cmTryCompileExec990043934.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+1>  Copyright (C) Microsoft Corporation.  All rights reserved.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec990043934.dir\Debug\\" /Fd"C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec990043934.pdb" /Gd /TC /errorReport:prompt "..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"
+1>  
+1>  CMakeCCompilerABI.c
+1>Link:
+1>  cmTryCompileExec990043934.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec990043934.exe
+1>LinkEmbedManifest:
+1>  cmTryCompileExec990043934.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec990043934.exe
+1>FinalizeBuildStatus:
+1>  Deleting file "cmTryCompileExec990043934.dir\Debug\cmTryCompileExec990043934.unsuccessfulbuild".
+1>  Touching "cmTryCompileExec990043934.dir\Debug\cmTryCompileExec990043934.lastbuildstate".
+1>
+1>Build succeeded.
+1>
+1>Time Elapsed 00:00:00.97
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp
+
+Run Build Command:c:\PROGRA~2\MICROS~2.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec2298509739
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: cmTryCompileExec2298509739, Configuration: Debug x64 ------
+1>Build started 23/01/2014 22:03:07.
+1>PrepareForBuild:
+1>  Creating directory "C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\".
+1>InitializeBuildStatus:
+1>  Creating "cmTryCompileExec2298509739.dir\Debug\cmTryCompileExec2298509739.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+1>  Copyright (C) Microsoft Corporation.  All rights reserved.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2298509739.dir\Debug\\" /Fd"C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2298509739.pdb" /Gd /TP /errorReport:prompt testCXXCompiler.cxx
+1>  
+1>  testCXXCompiler.cxx
+1>Link:
+1>  cmTryCompileExec2298509739.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2298509739.exe
+1>LinkEmbedManifest:
+1>  cmTryCompileExec2298509739.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2298509739.exe
+1>FinalizeBuildStatus:
+1>  Deleting file "cmTryCompileExec2298509739.dir\Debug\cmTryCompileExec2298509739.unsuccessfulbuild".
+1>  Touching "cmTryCompileExec2298509739.dir\Debug\cmTryCompileExec2298509739.lastbuildstate".
+1>
+1>Build succeeded.
+1>
+1>Time Elapsed 00:00:01.06
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp
+
+Run Build Command:c:\PROGRA~2\MICROS~2.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec2492343899
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: cmTryCompileExec2492343899, Configuration: Debug x64 ------
+1>Build started 23/01/2014 22:03:11.
+1>PrepareForBuild:
+1>  Creating directory "C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\".
+1>InitializeBuildStatus:
+1>  Creating "cmTryCompileExec2492343899.dir\Debug\cmTryCompileExec2492343899.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+1>  Copyright (C) Microsoft Corporation.  All rights reserved.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2492343899.dir\Debug\\" /Fd"C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2492343899.pdb" /Gd /TP /errorReport:prompt "..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp"
+1>  
+1>  CMakeCXXCompilerABI.cpp
+1>Link:
+1>  cmTryCompileExec2492343899.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2492343899.exe
+1>LinkEmbedManifest:
+1>  cmTryCompileExec2492343899.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2492343899.exe
+1>FinalizeBuildStatus:
+1>  Deleting file "cmTryCompileExec2492343899.dir\Debug\cmTryCompileExec2492343899.unsuccessfulbuild".
+1>  Touching "cmTryCompileExec2492343899.dir\Debug\cmTryCompileExec2492343899.lastbuildstate".
+1>
+1>Build succeeded.
+1>
+1>Time Elapsed 00:00:00.86
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+
+
+Determining if the Q_WS_WIN exist passed with the following output:
+Change Dir: C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp
+
+Run Build Command:c:\PROGRA~2\MICROS~2.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec1286625471
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: cmTryCompileExec1286625471, Configuration: Debug x64 ------
+1>Build started 23/01/2014 22:03:18.
+1>PrepareForBuild:
+1>  Creating directory "C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\".
+1>InitializeBuildStatus:
+1>  Creating "cmTryCompileExec1286625471.dir\Debug\cmTryCompileExec1286625471.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+1>  Copyright (C) Microsoft Corporation.  All rights reserved.
+1>  
+1>  cl /c /I"C:/Qt/4.8.2-x64/include" /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1286625471.dir\Debug\\" /Fd"C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1286625471.pdb" /Gd /TP /errorReport:prompt CheckSymbolExists.cxx
+1>  
+1>  CheckSymbolExists.cxx
+1>Link:
+1>  cmTryCompileExec1286625471.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1286625471.exe
+1>LinkEmbedManifest:
+1>  cmTryCompileExec1286625471.vcxproj -> C:\Users\PROMEC\Desktop\PluginEdgeCFD\build2\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1286625471.exe
+1>FinalizeBuildStatus:
+1>  Deleting file "cmTryCompileExec1286625471.dir\Debug\cmTryCompileExec1286625471.unsuccessfulbuild".
+1>  Touching "cmTryCompileExec1286625471.dir\Debug\cmTryCompileExec1286625471.lastbuildstate".
+1>
+1>Build succeeded.
+1>
+1>Time Elapsed 00:00:01.05
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+
+File C:/Users/PROMEC/Desktop/PluginEdgeCFD/build2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

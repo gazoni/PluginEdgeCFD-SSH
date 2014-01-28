@@ -1,0 +1,171 @@
+Bitvise FlowSsh License Terms
+
+Bitvise Limited, a limited liability company incorporated in Gibraltar with
+incorporation number 90668, ("Bitvise"), has developed and continues to
+develop a Windows SSH library for use with C, C++ and .NET applications named
+FlowSsh ("FlowSsh"), to which it owns all right, title, and interest, and is
+willing to grant you, meaning any individual or entity who will use FlowSsh,
+("you"), the license to use FlowSsh, upon the condition that you agree to,
+accept, and adhere to all of the terms herein.
+
+
+1. Right of use.
+
+You are granted the right to use FlowSsh in the sense that you may create
+software programs which interact with FlowSsh by making calls to functions,
+classes and methods exposed by FlowSsh's programmatic interface.
+
+You may NOT reverse engineer or disassemble or modify FlowSsh or any of its
+components. You may NOT access FlowSsh functionality otherwise than through
+the published programmatic interface. You may NOT circumvent the FlowSsh
+activation process. You may NOT use FlowSsh beyond the scope legally permitted
+where such use is taking place.
+
+
+2. License fees.
+
+You are granted the right to use FlowSsh free of charge for evaluation and
+testing only. In order to use FlowSsh for any purpose beyond evaluation and
+testing, you MUST first pay license fees appropriate for your usage purpose
+and circumstances, as determined by Bitvise. You may NOT use FlowSsh for a
+purpose or in circumstances for which license fees were not paid.
+
+
+3. Distribution.
+
+If you have ensured for correct and full payment of license fees according to
+Section 2 (License fees), the right of use obtained this way MAY include
+permission to create, distribute and/or market applications that use FlowSsh.
+If you receive such permission, you may distribute the main functional
+components of FlowSsh only together with your applications that use them, and
+only in the form of digitally signed, unmodified Dynamic Link Libraries as
+provided by Bitvise. The license terms for applications you distribute and/or
+market shall ensure equal or superior protection for Bitvise as these License
+Terms provide.
+
+
+4. Ownership.
+
+These License Terms do not convey to you any ownership interest in FlowSsh.
+You are merely granted the license to use FlowSsh, and potentially to
+incorporate and distribute it with your applications. All rights granted are
+revoked if you breach these License Terms.
+
+
+5. Support and Upgrades.
+
+Bitvise may provide support, maintenance, and access to new versions of
+FlowSsh (upgrades) on terms and for a price determined by Bitvise. Access to
+support, maintenance, and/or upgrades is guaranteed only if such services were
+purchased, and only to the extent, and for a duration, as stated by Bitvise
+when purchase of such services was made.
+
+
+6. Indemnification.
+
+Under the condition that you have ensured for correct and full payment of
+license fees according to Section 2 (License fees), Bitvise will indemnify you
+and your officers, directors, agents, employees, and direct and indirect end
+user customers against all claims, actions, judgments, awards, expenses
+(including reasonable attorney's fees) and damages awarded or agreed by
+Bitvise to be paid in settlement arising from a claim asserting that an
+unaltered release of FlowSsh including any modifications or enhancements
+(collectively the "Indemnified Software") released by Bitvise to the public
+during the term of this Agreement and used in accordance with the terms of
+this Agreement infringes a third-party copyright, trade secret or U.S. patent
+so long as you give Bitvise (a) prompt written notice of such claim or action;
+(b) the right to control and direct the investigation, preparation, defense,
+and settlement of the action; and (c) reasonable assistance and information.
+If a final injunction is obtained against your right to continue using the
+Indemnified Software or, if in Bitvise's opinion the Indemnified Software is
+likely to become the subject of a claim, Bitvise shall have the option to (i)
+obtain the right for you to continue using the Indemnified Software; or (ii)
+replace or modify the Indemnified Software so that it no longer infringes but
+functions equivalently and the replacement software does not affect the form,
+fit or function (including interoperability) of the Indemnified Software. If
+Bitvise determines that neither of these alternatives is practicable after
+sustained and reasonable efforts, Bitvise shall remove the infringing portion
+and refund to you an applicable portion of the monies you paid for the
+affected software less depreciation for use assuming straight line
+depreciation over a five-year useful life.
+
+
+7. Assignment.
+
+If you have obtained the right to use FlowSsh for a certain purpose and in
+certain circumstances by arranging payment of appropriate license fees, the
+arising rights of use shall benefit your organization's permitted successors.
+However, you may not assign these rights, or your obligations according to
+these License Terms, to a third party, unless explicitly permitted by Bitvise.
+
+
+8. Limitation of Responsibility.
+
+You may NOT use FlowSsh unless you agree that you, or any user of your
+application(s) that incorporate FlowSsh, shall NOT hold Bitvise responsible or
+liable:
+
+- for any damage or harm caused or arising through anyone's use, misuse or
+  attempted use of FlowSsh, whether direct or indirect, including but not
+  limited to any failure of or within FlowSsh, any programming error in,
+  triggered by or related to FlowSsh, or any incorrect or illegal use of
+  FlowSsh. Either you, or the users of your application(s) that incorporate
+  FlowSsh, shall assume the entire risk of the results and performance of the
+  use of FlowSsh;
+
+- for any damage or harm caused by a technical or administrative problem on
+  the recipient's or intermediary's behalf that cannot reasonably be cured by
+  Bitvise, including but not limited to any DNS or mail server issue or a
+  problem with a proxy, a firewall, email filtering or another network device.
+
+You agree that Bitvise's total liabilities, if any, arising from these License
+Terms, or from your use of FlowSsh, or from anyone's use of your
+application(s) that incorporate FlowSsh, shall not exceed the amount actually
+paid to Bitvise for such use of FlowSsh. Any use of FlowSsh that requires
+greater assurance may be only at yours, or your end users', risk and
+responsibility.
+
+If you were granted the right to distribute FlowSsh with your application(s),
+you shall ensure that your license terms protect Bitvise's limitation of
+responsibility as per this section, and agree that Bitvise may hold you liable
+for any costs arising from your failure to do so.
+
+
+9. Headings.
+
+Headings and captions are for convenience only and are not to be used in the
+interpretation of these License Terms.
+
+
+10. Governing Law, Jurisdiction and Venue.
+
+These License Terms shall be governed by the laws of England. You may NOT use
+FlowSsh unless:
+
+- you agree that any suit brought in relation to these License Terms shall be
+  brought in a court sitting in England, and that venue is proper in England;
+
+and
+
+- you agree not to dispute the personal jurisdiction of a court sitting in
+  England.
+
+
+11. Severability.
+
+If any provision of these License Terms is adjudged by any court of competent
+jurisdiction to be unenforceable or invalid, and that provision is capable of
+being limited or eliminated without destroying the material economic
+incentives of Bitvise to extend these License Terms and for you to accept
+them, then such provision shall be so limited or eliminated to the minimum
+extent necessary so that these License Terms shall otherwise remain in full
+force and effect and enforceable.
+
+
+12. Waiver.
+
+No failure to exercise or delay in exercising any right under these License
+Terms will operate as a waiver of that right, nor will any single or partial
+exercise of any right or power preclude further exercise of that right or any
+other right.
+

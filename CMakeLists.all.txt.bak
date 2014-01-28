@@ -1,0 +1,109 @@
+# Script de Configuracao do Plugin do EdgeCFD
+# LEANDRO GAZONI
+# LAMCE/COPPE/UFRJ
+
+PROJECT(runEdgeCFD) 
+SET(Application_src 
+configansys.cpp 
+io.cpp 
+main.cpp 
+runedgecfd.cpp) 
+
+SET(UIS configansys.ui menuAnsys.ui runedgecfd.ui)
+
+SET(Application_Headers 
+configansys.h
+formOrdenado.h
+forms.h
+io.h
+resource.h
+resource1.h
+resource2.h
+runedgecfd.h) 
+
+SET(Executable_name runEdgeCFD )
+
+cmake_minimum_required(VERSION 2.8)
+
+PROJECT(SetFEM)
+
+IF(NOT VTK_BINARY_DIR)
+FIND_PACKAGE(VTK)
+IF(NOT VTK_DIR)
+  MESSAGE(FATAL_ERROR "Please set VTK_DIR.")
+ENDIF(NOT VTK_DIR)
+INCLUDE(${VTK_USE_FILE})
+ENDIF(NOT VTK_BINARY_DIR)
+
+# use what QVTK built with
+SET(QT_MOC_EXECUTABLE ${VTK_QT_MOC_EXECUTABLE} CACHE FILEPATH "")
+SET(QT_UIC_EXECUTABLE ${VTK_QT_UIC_EXECUTABLE} CACHE FILEPATH "")
+SET(QT_QMAKE_EXECUTABLE ${VTK_QT_QMAKE_EXECUTABLE} CACHE FILEPATH "")
+FIND_PACKAGE(Qt4 REQUIRED)
+INCLUDE(${QT_USE_FILE})
+
+
+# Use the include path and library for Qt that is used by VTK.
+INCLUDE_DIRECTORIES(
+  ${QT_INCLUDE_DIR}
+  ${CMAKE_CURRENT_BINARY_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+# Set your files and resources here
+LINK_DIRECTORIES(${ICONS_DIR}/icons)  
+SET(SetFEMSrcs main.cpp SetFem.cpp InteractorStyle.cpp VisualizationPipeline.cpp ListLoadsWindow.cpp NodeInfo.cpp LisFileIO.cpp 
+    GeoFileWriter.cpp ArrowLabel.cpp AxesWidget.cpp PointsLabel.cpp GeoFileReader.cpp CheckDeleteData.cpp SetFemWidget.cpp LogIO.cpp )
+
+SET(SetFEMUI SetFem.ui projectName.ui saveDIR.ui saveDOF.ui saveFluxo.ui saveForces.ui saveMoments.ui saveNEU.ui savePhysicsC2D.ui
+ savePhysicsC3D.ui savePhysicsE2DEPD.ui savePhysicsE2DEPT.ui savePhysicsE3D.ui savePhysicsPLACA.ui savePhysicsCASCA.ui saveRotations.ui
+ saveTemperature.ui)
+
+SET(SetFEMHeaders SetFem.h InteractorStyle.h VisualizationPipeline.h ListLoadsWindow.h NodeInfo.h LisFileIO.h GeoFileWriter.h 
+    ArrowLabel.h AxesWidget.h PointsLabel.h GeoFileReader.h CheckDeleteData.h SetFemWidget.h LogIO.h)
+
+SET(SetFEMResources resources.qrc)
+
+# The rest should just work (sure...)
+QT4_WRAP_UI(UISrcs ${SetFEMUI})
+QT4_WRAP_CPP(MOCSrcs ${SetFEMHeaders} )
+QT4_ADD_RESOURCES(ResourceSrcs ${SetFEMResources})
+
+SOURCE_GROUP("Resources" FILES
+  ${SetFEMUI}
+  ${SetFEMwResources}
+  ${EXE_ICON}
+)
+
+SOURCE_GROUP("Generated" FILES
+  ${UISrcs}
+  ${MOCSrcs}
+  ${ResourceSrcs}
+  ${RCS_SOURCES}
+)
+
+ADD_DEFINITIONS(-DQT_GUI_LIBS -DQT_CORE_LIB -DQT3_SUPPORT)
+SET_SOURCE_FILES_PROPERTIES(${SetFEMSrcs} PROPERTIES
+                            OBJECT_DEPENDS "${UISrcs}")
+
+# It's nice to have the ui in the windows project file...just double click on it
+# and designer comes up on that ui file :)
+IF (${CMAKE_BUILD_TOOL} MATCHES "msdev")
+  SET (SetFEMSrcs ${SetFEMSrcs} ${SetFEMUI})
+ENDIF (${CMAKE_BUILD_TOOL} MATCHES "msdev")
+IF (${CMAKE_BUILD_TOOL} MATCHES "devenv")
+  SET (SetFEMSrcs ${SetFEMSrcs} ${SetFEMUI})
+ENDIF (${CMAKE_BUILD_TOOL} MATCHES "devenv")
+
+ADD_EXECUTABLE( SetFEM MACOSX_BUNDLE ${SetFEMSrcs} ${UISrcs} ${MOCSrcs} ${ResourceSrcs} ${SetFEMHeaders})
+
+TARGET_LINK_LIBRARIES( SetFEM
+  QVTK
+  ${QT_LIBRARIES}
+  vtkRendering
+  vtkGraphics
+  vtkIO
+  vtkCommon
+  vtkInfovis
+  vtkViews
+)

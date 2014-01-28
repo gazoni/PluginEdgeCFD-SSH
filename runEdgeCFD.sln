@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "runEdgeCFD", "runEdgeCFD.vcxproj", "{A1FB3164-F08C-39FA-AC83-41D2F7079585}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1FB3164-F08C-39FA-AC83-41D2F7079585}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A1FB3164-F08C-39FA-AC83-41D2F7079585}.Debug|Win32.Build.0 = Debug|Win32
+		{A1FB3164-F08C-39FA-AC83-41D2F7079585}.Debug|x64.ActiveCfg = Debug|x64
+		{A1FB3164-F08C-39FA-AC83-41D2F7079585}.Debug|x64.Build.0 = Debug|x64
+		{A1FB3164-F08C-39FA-AC83-41D2F7079585}.Release|Win32.ActiveCfg = Release|Win32
+		{A1FB3164-F08C-39FA-AC83-41D2F7079585}.Release|Win32.Build.0 = Release|Win32
+		{A1FB3164-F08C-39FA-AC83-41D2F7079585}.Release|x64.ActiveCfg = Release|x64
+		{A1FB3164-F08C-39FA-AC83-41D2F7079585}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

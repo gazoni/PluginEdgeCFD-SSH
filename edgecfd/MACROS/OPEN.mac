@@ -1,0 +1,16 @@
+! Abrindo FPSO_REDUZIDO.db DA PASTA: ..\ANSYS
+
+RESUME,'FPSO_REDUZIDO','db','..\ANSYS',0,0
+
+! Alterando o diretorio de trabalho para ..\ANSYS
+/CWD,'..\ANSYS' 
+
+! Executa a macro: ..\MACROS\SETUP_EDGECFD_REV-A
+
+/INPUT,'SETUP_EDGECFD_REV-A','MAC','..\MACROS\',, 0 
+
+
+/CWD,'..\ANSYS' 
+
+
+

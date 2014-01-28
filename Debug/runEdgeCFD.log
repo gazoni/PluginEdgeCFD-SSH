@@ -1,0 +1,34 @@
+﻿Build started 3/12/2013 2:53:57 PM.
+     1>Project "C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\runEdgeCFD.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\\bin\".
+       InitializeBuildStatus:
+         Creating "Debug\runEdgeCFD.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Moc'ing runedgecfd.h...
+         Uic'ing runedgecfd.ui...
+         Rcc'ing runedgecfd.qrc...
+     1>RCC : warning : No resources in 'C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\runedgecfd.qrc'.
+         
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /I"C:\Qt\4.8.2-x64\include" /I.\GeneratedFiles\Debug /I"C:\Qt\4.8.2-x64\include\QtCore" /I"C:\Qt\4.8.2-x64\include\QtGui" /I"C:\Qt\4.8.2-x64\include\QtXml" /I"C:\Qt\4.8.2-x64\include\QtOpenGL" /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_LARGEFILE_SUPPORT /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_XML_LIB /D QT_OPENGL_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\Debug\moc_runedgecfd.cpp main.cpp runedgecfd.cpp
+         moc_runedgecfd.cpp
+         main.cpp
+         runedgecfd.cpp
+         Generating Code...
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /I"C:\Qt\4.8.2-x64\include" /I.\GeneratedFiles\Debug /I"C:\Qt\4.8.2-x64\include\QtCore" /I"C:\Qt\4.8.2-x64\include\QtGui" /I"C:\Qt\4.8.2-x64\include\QtXml" /I"C:\Qt\4.8.2-x64\include\QtOpenGL" /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_LARGEFILE_SUPPORT /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_XML_LIB /D QT_OPENGL_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\qrc_runedgecfd.cpp
+         qrc_runedgecfd.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /l"0x0409" /nologo /fo"Debug\runEdgeCFD.res" runEdgeCFD.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\\bin\\runEdgeCFD.exe" /NOLOGO /LIBPATH:"C:\Qt\4.8.2-x64\lib" qtmaind.lib QtCored4.lib QtGuid4.lib QtXmld4.lib QtOpenGLd4.lib opengl32.lib glu32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\runEdgeCFD.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\bin\runEdgeCFD.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\\bin\runEdgeCFD.lib" /MACHINE:X86 Debug\runEdgeCFD.res
+         Debug\moc_runedgecfd.obj
+         Debug\qrc_runedgecfd.obj
+         Debug\main.obj
+         Debug\runedgecfd.obj
+     1>QtGuid4.lib(QtGuid4.dll) : fatal error LNK1112: module machine type 'x64' conflicts with target machine type 'X86'
+     1>Done Building Project "C:\Users\PROMEC\Documents\LAMCE\EDGE_CFD\RunEdgeCFD\runEdgeCFD\runEdgeCFD.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.34
